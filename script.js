@@ -46,10 +46,10 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 function nextPlayer(){
 	playerTurn === 0 ? playerTurn = 1 : playerTurn = 0;
 	roundScore = 0;
+	document.getElementById('round-0').textContent = '0';
 	document.getElementById('round-1').textContent = '0';
-	document.getElementById('round-2').textContent = '0';
+	document.querySelector('.player-0-panel').classList.toggle('active');
 	document.querySelector('.player-1-panel').classList.toggle('active');
-	document.querySelector('.player-2-panel').classList.toggle('active');
 	document.querySelector('.dice').style.display ='none';
 }
 
@@ -62,15 +62,15 @@ function init(){
 	gamePlaying = true;
 
 	document.querySelector('.dice').style.display = 'none';
+	document.getElementById('score-0').textContent = '0';
 	document.getElementById('score-1').textContent = '0';
-	document.getElementById('score-2').textContent = '0';
+	document.getElementById('round-0').textContent = '0';
 	document.getElementById('round-1').textContent = '0';
-	document.getElementById('round-2').textContent = '0';
-	document.getElementById('name-1').textContent = 'player 1';
-	document.getElementById('name-2').textContent = 'player 2';
+	document.getElementById('name-0').textContent = 'player 1';
+	document.getElementById('name-1').textContent = 'player 2';
+	document.querySelector('.player-0-panel').classList.remove('winner');
 	document.querySelector('.player-1-panel').classList.remove('winner');
-	document.querySelector('.player-2-panel').classList.remove('winner');
+	document.querySelector('.player-0-panel').classList.remove('active');
 	document.querySelector('.player-1-panel').classList.remove('active');
-	document.querySelector('.player-2-panel').classList.remove('active');
-	document.querySelector('.player-1-panel').classList.add('active');
+	document.querySelector('.player-0-panel').classList.add('active');
 }
