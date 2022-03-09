@@ -9,7 +9,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 		// affichage du numéro de dé
 		var diceDOM = document.querySelector('.dice');
 		diceDOM.style.display = 'block';
-		diceDOM.src = 'dice-' + dice +'.png';
+		diceDOM.src = 'images/dice-' + dice +'.png';
 		// réactuliser le roundScore si le numéro n'est pas 1
 		if(dice !== 1){
 			roundScore += dice;
